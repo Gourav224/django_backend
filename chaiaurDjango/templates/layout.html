@@ -10,13 +10,15 @@
         Django
         {% endblock %}
     </title>
-    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
     {% tailwind_css %}
 
 </head>
-<body>
-    <nav>this is our navbar</nav>
-    {% block  content %}{% endblock %}
- 
+<body class="bg-[#042326] text-stone-50">
+    <nav class="bg-[#1D7373] p-4">
+        <div class="container mx-auto">
+            <h1 class="text-2xl font-bold">This is our Navbar</h1>
+        </div>
+    </nav>
+    {% block content %}{% endblock %}
 </body>
 </html>

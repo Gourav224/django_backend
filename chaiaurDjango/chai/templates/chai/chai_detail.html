@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %} {{chai.name}} {% endblock %}
+{% block content %}
+
+<section class="bg-[#107361] text-slate-100 p-8 text-center">
+    <h1 class="text-5xl font-bold  mb-4">{{chai.name}}</h1>
+    <img
+        src="{{chai.image.url}}"
+        alt="{{chai.name}}"
+        class=" mx-auto  w-96 rounded-lg shadow-md mb-4"
+    />
+    <div class="flex  mx-16 text-center  justify-center ">
+        <p class="text-lg  text-slate-100   mb-6">{{chai.description}}</p>
+    </div>
+    <button
+        type="button"
+        class="inline-flex items-center px-6 py-3 border border-transparent text-base text-slate-100  font-medium rounded-md bg-[#0A3A40] hover:bg-[#0a3a408d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0f595984] transition duration-300"
+    >
+        Buy Now
+    </button>
+</section>
+
+<!-- Additional Information Section -->
+<section class="bg-[#107361] p-8 text-[#042326]">
+    <h2 class="text-3xl font-semibold  mb-4">
+        Why You'll Love {{chai.name}}
+    </h2>
+    <ul class="list-disc list-inside text-lg ">
+        <li>Rich and aromatic flavor profile</li>
+        <li>Handpicked and organically grown</li>
+        <li>Perfect for any time of the day</li>
+        <li>Health benefits including improved digestion and metabolism</li>
+    </ul>
+</section>
+
+{% endblock %}
